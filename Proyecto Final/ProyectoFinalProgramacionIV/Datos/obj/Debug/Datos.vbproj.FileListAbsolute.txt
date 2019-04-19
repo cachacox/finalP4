@@ -1,0 +1,9 @@
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.vbprojResolveAssemblyReference.cache
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.Resources.resources
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.xml
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\Debug\Datos.dll
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\Debug\Datos.pdb
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\Debug\Datos.xml
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.dll
+C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\Debug\Datos.pdb
