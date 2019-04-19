@@ -10,6 +10,7 @@ C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Deb
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.dll
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.pdb
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.xml
+<<<<<<< HEAD
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.dll
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.pdb
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.xml
@@ -22,3 +23,17 @@ C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\Pro
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.dll
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.xml
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.pdb
+=======
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Logica.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\bin\Debug\Datos.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.vbprojResolveAssemblyReference.cache
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.Resources.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.vbproj.GenerateResource.Cache
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Logica\obj\Debug\Logica.pdb
+>>>>>>> ae4bae3b1d3e9e70d86a2adfbae390163f48e9eb

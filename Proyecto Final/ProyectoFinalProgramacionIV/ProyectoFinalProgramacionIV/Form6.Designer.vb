@@ -29,6 +29,7 @@ Partial Class IncidentesResueltos
         '
         'DataGridViewIncidentesResueltos
         '
+        Me.DataGridViewIncidentesResueltos.AllowUserToAddRows = False
         Me.DataGridViewIncidentesResueltos.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)

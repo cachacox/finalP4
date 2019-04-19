@@ -59,4 +59,16 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
     End Function
 
+    Public Shared Function ResumenIncidentesResueltos() As DataTable
+        Dim _comando As SqlCommand = MetodosDatos.CrearComando()
+        _comando.CommandText = "select DISTINCT  Estado,
+        sum(case when Prioridad_Real = 'Emergencia' then 1 else 0 end) Emergencia,
+        sum(case when Prioridad_Real = 'Alta' then 1 else 0 end) Alta,
+        sum(case when Prioridad_Real = 'Media' then 1 else 0 end) Media,
+        sum(case when Prioridad_Real = 'Baja' then 1 else 0 end) Baja
+        from excel
+        group by Estado;"
+        Return MetodosDatos.EjecutarComandoSelect(_comando)
+    End Function
+
 End Class
