@@ -24,3 +24,25 @@ C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\Pro
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.exe
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.xml
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\ProyectoFinalProgramacionIV.exe.config
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.exe
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\ProyectoFinalProgramacionIV.exe
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\ProyectoFinalProgramacionIV.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\ProyectoFinalProgramacionIV.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Logica.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Datos.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Logica.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Logica.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Datos.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Datos.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.vbprojResolveAssemblyReference.cache
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.Form1.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.ModulosAfectados.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.IncidentesMora.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.IncidentesPendientes.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.IncidentesNuevos.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.IncidentesResueltos.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.Resources.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.vbproj.GenerateResource.Cache
