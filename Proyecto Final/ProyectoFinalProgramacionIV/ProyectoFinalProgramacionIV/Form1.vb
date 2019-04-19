@@ -4,7 +4,6 @@ Imports System.Windows.Forms
 Public Class Form1
 
     Sub ColoresTalbla()
-
         For i As Integer = 0 To DataGridViewPrincipal.Rows.Count - 1
             If DataGridViewPrincipal.Rows(i).Cells(9).Value.ToString = "Prorroga" Then
                 DataGridViewPrincipal.Rows(i).DefaultCellStyle.BackColor = Color.Yellow
@@ -18,7 +17,6 @@ Public Class Form1
                 DataGridViewPrincipal.Rows(i).DefaultCellStyle.BackColor = Color.LawnGreen
             End If
         Next
-
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
