@@ -25,9 +25,9 @@ Public Class AccesoDatos
         Return excelDTS
     End Function
 
-    Public Shared Function InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado) As DataTable
+    Public Shared Function InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
         Dim comandoInsertar As SqlCommand = MetodosDatos.CrearComando
-        comandoInsertar.CommandText = "Insert into excel values (@No_Incidente, @Usuario, @Fecha_Creacion, @Prioridad, @Prioridad_Real, @Horas, @Fecha_Est, @Fecha_Asigna, @Fecha_Resul, @Estado)"
+        comandoInsertar.CommandText = "Insert into excel values (@No_Incidente, @Usuario, @Fecha_Creacion, @Prioridad, @Prioridad_Real, @Horas, @Fecha_Est, @Fecha_Asigna, @Fecha_Resul, @Estado, @modulo)"
 
         comandoInsertar.Parameters.Add("@No_Incidente", SqlDbType.NVarChar)
         comandoInsertar.Parameters.Add("@Usuario", SqlDbType.NVarChar)
@@ -39,6 +39,7 @@ Public Class AccesoDatos
         comandoInsertar.Parameters.Add("@Fecha_Asigna", SqlDbType.DateTime2)
         comandoInsertar.Parameters.Add("@Fecha_Resul", SqlDbType.DateTime2)
         comandoInsertar.Parameters.Add("@Estado", SqlDbType.NVarChar)
+        comandoInsertar.Parameters.Add("@modulo", SqlDbType.NVarChar)
 
         comandoInsertar.Parameters("@No_Incidente").Value = no_incidente
         comandoInsertar.Parameters("@Usuario").Value = usuario
@@ -50,7 +51,11 @@ Public Class AccesoDatos
         comandoInsertar.Parameters("@Fecha_Asigna").Value = Convert.ToDateTime(fecha_asignado)
         comandoInsertar.Parameters("@Fecha_Resul").Value = Convert.ToDateTime(fecha_resultado)
         comandoInsertar.Parameters("@Estado").Value = estado
-
+        If _mod <> Nothing Then
+            comandoInsertar.Parameters("@modulo").Value = _mod
+        Else
+            comandoInsertar.Parameters("@modulo").Value = ""
+        End If
         Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
     End Function
 

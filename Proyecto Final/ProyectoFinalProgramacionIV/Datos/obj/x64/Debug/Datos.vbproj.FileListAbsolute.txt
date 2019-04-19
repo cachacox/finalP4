@@ -1,0 +1,9 @@
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x64\Debug\Datos.dll
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x64\Debug\Datos.pdb
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x64\Debug\Datos.xml
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.Resources.resources
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.dll
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.xml
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.pdb
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x64\Debug\Datos.vbprojResolveAssemblyReference.cache

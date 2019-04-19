@@ -106,6 +106,7 @@ Public Class Form1
         Dim fecha_asignado As Date
         Dim fecha_resultado As Date
         Dim estado As String
+        Dim _mod As String
 
         For i As Integer = 0 To DataGridViewPrincipal.Rows.Count - 1
 
@@ -119,9 +120,12 @@ Public Class Form1
             fecha_asignado = DataGridViewPrincipal.Rows(i).Cells(7).Value
             fecha_resultado = DataGridViewPrincipal.Rows(i).Cells(8).Value
             estado = DataGridViewPrincipal.Rows(i).Cells(9).Value
-
-            AccesoLogica.InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado)
-
+            If IsDBNull(DataGridViewPrincipal.Rows(i).Cells(10).Value) Then
+                _mod = ""
+            Else
+                _mod = DataGridViewPrincipal.Rows(i).Cells(10).Value
+            End If
+            AccesoLogica.InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod)
             ProgressBar.Value = i
         Next
         MessageBox.Show("Se guardo la data satisfactoriamente")
