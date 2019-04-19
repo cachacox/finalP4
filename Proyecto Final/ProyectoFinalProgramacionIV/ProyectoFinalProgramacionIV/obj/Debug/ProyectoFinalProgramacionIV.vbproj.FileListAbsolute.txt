@@ -20,3 +20,7 @@ C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalP
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Logica.xml
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Datos.pdb
 C:\Users\jei03\Desktop\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\Datos.xml
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\bin\Debug\ProyectoFinalProgramacionIV.exe.config
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.exe
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.xml
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\Debug\ProyectoFinalProgramacionIV.pdb
