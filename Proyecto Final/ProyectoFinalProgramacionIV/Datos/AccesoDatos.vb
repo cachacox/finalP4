@@ -25,10 +25,15 @@ Public Class AccesoDatos
         Return excelDTS
     End Function
 
+    Public Shared Function LastRow() As DataTable
+        Dim comandoInsertar As SqlCommand = MetodosDatos.ComandoSP
+        comandoInsertar.CommandText = "LastRow"
+        Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
+    End Function
+
     Public Shared Function InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
         Dim comandoInsertar As SqlCommand = MetodosDatos.CrearComando
         comandoInsertar.CommandText = "Insert into excel values (@No_Incidente, @Usuario, @Fecha_Creacion, @Prioridad, @Prioridad_Real, @Horas, @Fecha_Est, @Fecha_Asigna, @Fecha_Resul, @Estado, @modulo)"
-
         comandoInsertar.Parameters.Add("@No_Incidente", SqlDbType.NVarChar)
         comandoInsertar.Parameters.Add("@Usuario", SqlDbType.NVarChar)
         comandoInsertar.Parameters.Add("@Fecha_Creacion", SqlDbType.DateTime2)
@@ -40,7 +45,6 @@ Public Class AccesoDatos
         comandoInsertar.Parameters.Add("@Fecha_Resul", SqlDbType.DateTime2)
         comandoInsertar.Parameters.Add("@Estado", SqlDbType.NVarChar)
         comandoInsertar.Parameters.Add("@modulo", SqlDbType.NVarChar)
-
         comandoInsertar.Parameters("@No_Incidente").Value = no_incidente
         comandoInsertar.Parameters("@Usuario").Value = usuario
         comandoInsertar.Parameters("@Fecha_Creacion").Value = Convert.ToDateTime(fecha_creacion)

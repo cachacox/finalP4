@@ -51,7 +51,8 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonInsertar_Click(sender As Object, e As EventArgs) Handles ButtonInsertar.Click
-
+        Dim frmInsert = New frmInsertar()
+        frmInsertar.ShowDialog()
     End Sub
 
     Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click

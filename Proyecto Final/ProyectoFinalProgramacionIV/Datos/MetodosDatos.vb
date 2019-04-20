@@ -11,6 +11,16 @@ Public Class MetodosDatos
         comando.CommandType = CommandType.Text
         Return comando
     End Function
+
+    Public Shared Function ComandoSP() As SqlCommand
+        Dim dbString = Configuracion.dbString
+        Dim conexion As New SqlConnection
+        conexion.ConnectionString = dbString
+        Dim comando As New SqlCommand
+        comando = conexion.CreateCommand
+        comando.CommandType = CommandType.StoredProcedure
+        Return comando
+    End Function
     Public Shared Function EjecutarComandoSelect(comando As SqlCommand) As DataTable
         Dim _tabla As New DataTable()
         Try

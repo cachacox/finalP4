@@ -20,3 +20,4 @@ C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\Pro
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\x64\Debug\ProyectoFinalProgramacionIV.exe
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\x64\Debug\ProyectoFinalProgramacionIV.xml
 C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\x64\Debug\ProyectoFinalProgramacionIV.pdb
+C:\Users\Carlos\OneDrive - Universidad Hispanoamericana\Universidad\Progra 4\ProyectoFinal\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\ProyectoFinalProgramacionIV\obj\x64\Debug\ProyectoFinalProgramacionIV.frmInsertar.resources

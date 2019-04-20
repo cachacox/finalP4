@@ -14,4 +14,8 @@ Public Class AccesoLogica
         Return AccesoDatos.ResumenIncidentesResueltos()
     End Function
 
+    Public Shared Function LastRow() As DataTable
+        Return AccesoDatos.LastRow()
+    End Function
+
 End Class
