@@ -3,13 +3,15 @@ Public Class frmInsertar
     Private Sub frmInsertar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim x As DataTable
         Dim s As String
-        Dim sb As Integer
+        Dim sb As Integer = 0
         dttFecha = Now()
         cbxPrioridad.SelectedIndex = 0
         cbxModulo.SelectedIndex = 0
         x = AccesoLogica.LastRow()
-        s = x.Rows(0).Item(0)
-        sb = Convert.ToInt32(Strings.Mid(s, 3) + 1)
+        If x.Rows.Count > 0 Then
+            s = x.Rows(0).Item(0)
+            sb = Convert.ToInt32(Strings.Mid(s, 3) + 1)
+        End If
         lblNumINC.Text = sb
         lblFechaCreacion.Text = dttFecha
     End Sub
@@ -39,7 +41,7 @@ Public Class frmInsertar
         Dim _hora As Decimal = Math.Round(Now().Hour + (Now().Minute / 60), 1)
         Dim _fechas As Date = Today()
         Dim _flag As Boolean = False
-        'Dim _media As Decimal = 32.0
+        Dim _horasTemp As Double
 
         'esto sirve, volver a ponerlo
         'If _fechas.DayOfWeek = DayOfWeek.Saturday Then
@@ -67,7 +69,8 @@ Public Class frmInsertar
                             'esto es la diferencia entre las 8 de la mañana y la hora actual
                             Dim intDiff As Double
                             intDiff = Math.Round((_hora - startOfShift.Hour), 1)
-                            startOfShift.AddHours(intDiff)
+                            startOfShift = startOfShift.AddHours(intDiff)
+                            _horasTemp = 8 - intDiff 'estas horas tengo que agregarlas al final.
                             _flag = True
                         End If
 
