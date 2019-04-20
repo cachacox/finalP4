@@ -143,7 +143,7 @@ Partial Class frmInsertar
         Me.txtFechaEstimada.Enabled = False
         Me.txtFechaEstimada.Location = New System.Drawing.Point(117, 167)
         Me.txtFechaEstimada.Name = "txtFechaEstimada"
-        Me.txtFechaEstimada.Size = New System.Drawing.Size(121, 20)
+        Me.txtFechaEstimada.Size = New System.Drawing.Size(195, 20)
         Me.txtFechaEstimada.TabIndex = 12
         '
         'Label8

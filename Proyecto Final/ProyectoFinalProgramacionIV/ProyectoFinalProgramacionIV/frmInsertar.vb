@@ -33,6 +33,18 @@ Public Class frmInsertar
 
     Sub DeterminaHoras(_str)
         Dim estimado As DateTime
+        Dim _ano As Integer = Date.Today.Year
+        Dim _mes As Integer = Date.Today.Month
+        Dim _dia As Integer = Date.Today.Day
+        Dim _hora As Integer = Now().Hour
+        Dim _fechas As Date = Today()
+
+        If _fechas.DayOfWeek = DayOfWeek.Saturday Then
+            _dia = _dia + 2
+        ElseIf _fechas.DayOfWeek = DayOfWeek.Saturday Then
+            _dia = _dia + 1
+        End If
+
         If dttFecha <> Nothing Then
             Select Case _str
                 Case "Emergencia"
@@ -42,9 +54,20 @@ Public Class frmInsertar
                     estimado = dttFecha.AddHours(26)
                     txtFechaEstimada.Text = estimado
                 Case "Media"
-                    'falta
-                    estimado = dttFecha.AddHours(32)
-                    txtFechaEstimada.Text = estimado
+                    Dim startime As DateTimeOffset
+                    Dim startOfShift As DateTimeOffset
+                    startime = New DateTimeOffset(_ano, _mes, _dia, _hora, 0, 0, DateTimeOffset.Now.Offset)
+                    startOfShift = startime.AddHours(8)
+                    Dim intHoras As Integer = 0
+                    While (startOfShift.DayOfWeek <> DayOfWeek.Saturday And startOfShift.DayOfWeek <> DayOfWeek.Sunday And intHoras < 32)
+                        If startOfShift.Hour = 16 Then
+                            intHoras = intHoras + 8
+                        End If
+                        startOfShift = startOfShift.AddHours(8)
+                    End While
+                    Dim strFecha = startOfShift.AddHours(-8).ToString
+                    Dim intLen = strFecha.Length - 7
+                    txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
                 Case "Baja"
                     'falta
                     estimado = dttFecha.AddHours(288)
