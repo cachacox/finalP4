@@ -36,14 +36,17 @@ Public Class frmInsertar
         Dim _ano As Integer = Date.Today.Year
         Dim _mes As Integer = Date.Today.Month
         Dim _dia As Integer = Date.Today.Day
-        Dim _hora As Integer = Now().Hour
+        Dim _hora As Decimal = Math.Round(Now().Hour + (Now().Minute / 60), 1)
         Dim _fechas As Date = Today()
+        Dim _flag As Boolean = False
+        'Dim _media As Decimal = 32.0
 
-        If _fechas.DayOfWeek = DayOfWeek.Saturday Then
-            _dia = _dia + 2
-        ElseIf _fechas.DayOfWeek = DayOfWeek.Saturday Then
-            _dia = _dia + 1
-        End If
+        'esto sirve, volver a ponerlo
+        'If _fechas.DayOfWeek = DayOfWeek.Saturday Then
+        '    _dia = _dia + 2
+        'ElseIf _fechas.DayOfWeek = DayOfWeek.Saturday Then
+        '    _dia = _dia + 1
+        'End If
 
         If dttFecha <> Nothing Then
             Select Case _str
@@ -56,18 +59,42 @@ Public Class frmInsertar
                 Case "Media"
                     Dim startime As DateTimeOffset
                     Dim startOfShift As DateTimeOffset
-                    startime = New DateTimeOffset(_ano, _mes, _dia, _hora, 0, 0, DateTimeOffset.Now.Offset)
+                    startime = New DateTimeOffset(_ano, _mes, _dia, 0, 0, 0, DateTimeOffset.Now.Offset)
                     startOfShift = startime.AddHours(8)
                     Dim intHoras As Integer = 0
-                    While (startOfShift.DayOfWeek <> DayOfWeek.Saturday And startOfShift.DayOfWeek <> DayOfWeek.Sunday And intHoras < 32)
-                        If startOfShift.Hour = 16 Then
-                            intHoras = intHoras + 8
+                    If _fechas.DayOfWeek = DayOfWeek.Saturday Or _fechas.DayOfWeek = DayOfWeek.Sunday Then
+                        If _hora > startOfShift.Hour And _flag = False Then
+                            'esto es la diferencia entre las 8 de la mañana y la hora actual
+                            Dim intDiff As Double
+                            intDiff = Math.Round((_hora - startOfShift.Hour), 1)
+                            startOfShift.AddHours(intDiff)
+                            _flag = True
                         End If
-                        startOfShift = startOfShift.AddHours(8)
-                    End While
-                    Dim strFecha = startOfShift.AddHours(-8).ToString
-                    Dim intLen = strFecha.Length - 7
-                    txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
+
+                        'esto es mi bandera
+                        While (intHoras < 32)
+                            If startOfShift.Hour = 16 Then
+                                intHoras = intHoras + 8
+                            End If
+                            startOfShift = startOfShift.AddHours(8)
+                        End While
+                        Dim strFecha = startOfShift.AddHours(-8).ToString
+                        Dim intLen = strFecha.Length - 7
+                        txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
+
+                        'esto ya sirve, dejarlo aquí
+                        'While (intHoras < 32)
+                        '    If startOfShift.Hour = 16 Then
+                        '        intHoras = intHoras + 8
+                        '    End If
+                        '    startOfShift = startOfShift.AddHours(8)
+                        'End While
+                        'Dim strFecha = startOfShift.AddHours(-8).ToString
+                        'Dim intLen = strFecha.Length - 7
+                        'txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
+                    Else
+
+                    End If
                 Case "Baja"
                     'falta
                     estimado = dttFecha.AddHours(288)
