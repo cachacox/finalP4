@@ -75,4 +75,26 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(_comando)
     End Function
 
+    Public Shared Function ResumenCantidadPorModuloAfectado() As DataTable
+        Dim _comando As SqlCommand = MetodosDatos.CrearComando()
+        _comando.CommandText = "select DISTINCT  modulo,
+        sum(case when Prioridad_Real = 'Emergencia' then 1 else 0 end) Emergencia,
+        sum(case when Prioridad_Real = 'Alta' then 1 else 0 end) Alta,
+        sum(case when Prioridad_Real = 'Media' then 1 else 0 end) Media,
+        sum(case when Prioridad_Real = 'Baja' then 1 else 0 end) Baja
+        from excel
+        group by modulo;"
+        Return MetodosDatos.EjecutarComandoSelect(_comando)
+    End Function
+
+    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.ComandoSP
+        comando.CommandText = "FiltrosResumenModuloAfectados"
+        comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
+        comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters("@fecha_inicio").Value = fecha_inicio
+        comando.Parameters("@fecha_final").Value = fecha_final
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
 End Class

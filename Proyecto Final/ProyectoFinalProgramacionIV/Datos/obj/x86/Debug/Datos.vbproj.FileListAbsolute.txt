@@ -1,0 +1,9 @@
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x86\Debug\Datos.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x86\Debug\Datos.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\bin\x86\Debug\Datos.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.Resources.resources
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.vbproj.GenerateResource.Cache
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.dll
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.xml
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.pdb
+C:\Users\jei03\Desktop\Trabajo Compartido\finalP4\Proyecto Final\ProyectoFinalProgramacionIV\Datos\obj\x86\Debug\Datos.vbprojResolveAssemblyReference.cache

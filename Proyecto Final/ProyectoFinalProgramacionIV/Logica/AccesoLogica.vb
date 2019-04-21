@@ -13,8 +13,16 @@ Public Class AccesoLogica
         Return AccesoDatos.ResumenIncidentesResueltos()
     End Function
 
+    Public Shared Function ResumenCantidadPorModuloAfectado() As DataTable
+        Return AccesoDatos.ResumenCantidadPorModuloAfectado()
+    End Function
+
     Public Shared Function LastRow() As DataTable
         Return AccesoDatos.LastRow()
+    End Function
+
+    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final) As DataTable
+        Return AccesoDatos.FiltrarResumenModuloAfectado(fecha_inicio, fecha_final)
     End Function
 
 End Class
