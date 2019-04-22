@@ -6,10 +6,8 @@ Public Class ModulosAfectados
     End Sub
 
     Private Sub ButtonFiltrar_Click(sender As Object, e As EventArgs) Handles ButtonFiltrar.Click
-
         Dim inicio As DateTime = DateTimePickerInicio.Value.ToString
         Dim final As DateTime = DateTimePickerFinal.Value.ToString
         DataGridViewModulosAfectados.DataSource = AccesoLogica.FiltrarResumenModuloAfectado(inicio, final)
-
     End Sub
 End Class

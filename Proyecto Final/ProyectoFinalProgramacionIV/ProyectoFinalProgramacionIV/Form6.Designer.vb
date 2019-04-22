@@ -31,6 +31,7 @@ Partial Class IncidentesResueltos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.ButtonFiltrar = New System.Windows.Forms.Button()
+        Me.ButtonRestablecerFiltro = New System.Windows.Forms.Button()
         CType(Me.DataGridViewIncidentesResueltos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -105,11 +106,21 @@ Partial Class IncidentesResueltos
         Me.ButtonFiltrar.Text = "Filtrar"
         Me.ButtonFiltrar.UseVisualStyleBackColor = True
         '
+        'ButtonRestablecerFiltro
+        '
+        Me.ButtonRestablecerFiltro.Location = New System.Drawing.Point(142, 102)
+        Me.ButtonRestablecerFiltro.Name = "ButtonRestablecerFiltro"
+        Me.ButtonRestablecerFiltro.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRestablecerFiltro.TabIndex = 16
+        Me.ButtonRestablecerFiltro.Text = "Restablecer"
+        Me.ButtonRestablecerFiltro.UseVisualStyleBackColor = True
+        '
         'IncidentesResueltos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(584, 361)
+        Me.Controls.Add(Me.ButtonRestablecerFiltro)
         Me.Controls.Add(Me.ButtonFiltrar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -136,4 +147,5 @@ Partial Class IncidentesResueltos
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents ButtonFiltrar As Button
+    Friend WithEvents ButtonRestablecerFiltro As Button
 End Class
