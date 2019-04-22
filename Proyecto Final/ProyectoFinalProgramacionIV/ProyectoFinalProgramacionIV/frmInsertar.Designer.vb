@@ -197,7 +197,7 @@ Partial Class frmInsertar
         Me.btnInsertar.Name = "btnInsertar"
         Me.btnInsertar.Size = New System.Drawing.Size(75, 23)
         Me.btnInsertar.TabIndex = 18
-        Me.btnInsertar.Text = "&Insertar"
+        Me.btnInsertar.Text = "&Guardar"
         Me.btnInsertar.UseVisualStyleBackColor = True
         '
         'frmInsertar

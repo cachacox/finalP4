@@ -19,7 +19,7 @@ Public Class frmInsertar
     Private Sub cbxPrioridad_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPrioridad.SelectedIndexChanged
         Select Case cbxPrioridad.SelectedItem
             Case "Emergencia"
-                txtHoras.Text = "4.5"
+                txtHoras.Text = "4"
                 DeterminaHoras(cbxPrioridad.SelectedItem)
             Case "Alta"
                 txtHoras.Text = "26"
@@ -162,6 +162,25 @@ Public Class frmInsertar
                         txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
                     End If
             End Select
+        End If
+    End Sub
+
+    Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
+        Dim strIncidente As String = ""
+        Dim value As DateTime = DateTime.MinValue
+        strIncidente = "IN" + lblNumINC.Text
+        If txtNombre.Text <> "" Then
+            AccesoLogica.InsertarSQL(strIncidente, txtNombre.Text, Convert.ToDateTime(lblFechaCreacion.Text), cbxPrioridad.SelectedItem.ToString, Convert.ToInt32(txtHoras.Text), Convert.ToDateTime(txtFechaEstimada.Text), txtEstado.Text, cbxModulo.SelectedItem.ToString)
+            'incide
+            'usuario
+            'fecha creac
+            'prioridad
+            'horas
+            'fecha est
+            'estado
+            '_Mod
+        Else
+            MsgBox("Debe llenar todos los espacios")
         End If
     End Sub
 End Class
