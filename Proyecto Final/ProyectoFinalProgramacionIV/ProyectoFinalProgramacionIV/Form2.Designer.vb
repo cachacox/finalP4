@@ -31,11 +31,13 @@ Partial Class ModulosAfectados
         Me.DateTimePickerInicio = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ComboBoxFiltro = New System.Windows.Forms.ComboBox()
+        Me.ButtonRestablecerFiltro = New System.Windows.Forms.Button()
         CType(Me.DataGridViewModulosAfectados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridViewModulosAfectados
         '
+        Me.DataGridViewModulosAfectados.AllowUserToAddRows = False
         Me.DataGridViewModulosAfectados.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -104,11 +106,21 @@ Partial Class ModulosAfectados
         Me.ComboBoxFiltro.Size = New System.Drawing.Size(121, 21)
         Me.ComboBoxFiltro.TabIndex = 8
         '
+        'ButtonRestablecerFiltro
+        '
+        Me.ButtonRestablecerFiltro.Location = New System.Drawing.Point(141, 105)
+        Me.ButtonRestablecerFiltro.Name = "ButtonRestablecerFiltro"
+        Me.ButtonRestablecerFiltro.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonRestablecerFiltro.TabIndex = 16
+        Me.ButtonRestablecerFiltro.Text = "Restablecer"
+        Me.ButtonRestablecerFiltro.UseVisualStyleBackColor = True
+        '
         'ModulosAfectados
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(584, 361)
+        Me.Controls.Add(Me.ButtonRestablecerFiltro)
         Me.Controls.Add(Me.ButtonFiltrar)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -135,4 +147,5 @@ Partial Class ModulosAfectados
     Friend WithEvents DateTimePickerInicio As DateTimePicker
     Friend WithEvents Label1 As Label
     Friend WithEvents ComboBoxFiltro As ComboBox
+    Friend WithEvents ButtonRestablecerFiltro As Button
 End Class

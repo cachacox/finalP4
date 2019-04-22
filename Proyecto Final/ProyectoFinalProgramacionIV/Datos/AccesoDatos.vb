@@ -97,4 +97,22 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 
+    Public Shared Function ResumenIncidentesMora() As DataTable
+        Dim comando As SqlCommand = MetodosDatos.CrearComando
+        comando.CommandText = "SELECT * from excel WHERE Fecha_Resul IS NULL OR Fecha_Resul = '' AND Fecha_Est > CAST(CURRENT_TIMESTAMP AS DATE)"
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function ResumenIncidentesPendientes() As DataTable
+        Dim comando As SqlCommand = MetodosDatos.CrearComando
+        comando.CommandText = "SELECT * from excel WHERE Fecha_Resul IS NULL OR Fecha_Resul = '' AND Fecha_Est < CAST(CURRENT_TIMESTAMP AS DATE)"
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function ResumenNuevos() As DataTable
+        Dim comando As SqlCommand = MetodosDatos.CrearComando
+        comando.CommandText = "SELECT * from excel"
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
 End Class
