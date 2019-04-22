@@ -167,18 +167,12 @@ Public Class frmInsertar
 
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Dim strIncidente As String = ""
-        Dim value As DateTime = DateTime.MinValue
+        Dim strNull As String = ""
+        Dim datenull As DateTime = DateTime.MinValue
         strIncidente = "IN" + lblNumINC.Text
         If txtNombre.Text <> "" Then
-            AccesoLogica.InsertarSQL(strIncidente, txtNombre.Text, Convert.ToDateTime(lblFechaCreacion.Text), cbxPrioridad.SelectedItem.ToString, Convert.ToInt32(txtHoras.Text), Convert.ToDateTime(txtFechaEstimada.Text), txtEstado.Text, cbxModulo.SelectedItem.ToString)
-            'incide
-            'usuario
-            'fecha creac
-            'prioridad
-            'horas
-            'fecha est
-            'estado
-            '_Mod
+            AccesoLogica.InsertarInfoExcel(strIncidente, txtNombre.Text, lblFechaCreacion.Text, cbxPrioridad.SelectedItem.ToString, strNull, txtHoras.Text, txtFechaEstimada.Text, datenull, datenull, txtEstado.Text, cbxModulo.SelectedItem.ToString)
+            AccesoLogica.CargarTabla()
         Else
             MsgBox("Debe llenar todos los espacios")
         End If

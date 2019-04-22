@@ -23,15 +23,15 @@ Public Class MetodosDatos
     End Function
     Public Shared Function EjecutarComandoSelect(comando As SqlCommand) As DataTable
         Dim _tabla As New DataTable()
-        'Try
-        comando.Connection.Open()
+        Try
+            comando.Connection.Open()
             Dim _adaptador As New SqlDataAdapter()
             _adaptador.SelectCommand = comando
             _adaptador.Fill(_tabla)
-        'Catch ex As Exception
-        'Finally
-        comando.Connection.Close()
-        'End Try
+        Catch ex As Exception
+        Finally
+            comando.Connection.Close()
+        End Try
         Return _tabla
     End Function
 

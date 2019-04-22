@@ -23,6 +23,13 @@ Public Class Form1
         ButtonActualizar.Visible = False
         ProgressBar.Visible = False
         LabelCargando.Visible = False
+        Dim tbldtgPrincipal As DataTable
+        tbldtgPrincipal = AccesoLogica.CargarTabla()
+        If tbldtgPrincipal.Rows.Count > 0 Then
+            DataGridViewPrincipal.DataSource = tbldtgPrincipal
+            ColoresTalbla()
+        End If
+
     End Sub
 
     Private Sub ButtonModulosAfectados_Click(sender As Object, e As EventArgs) Handles ButtonModulosAfectados.Click

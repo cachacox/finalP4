@@ -30,28 +30,28 @@ Public Class AccesoDatos
         comandoInsertar.CommandText = "LastRow"
         Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
     End Function
-    Public Shared Function InsertarSQL(_a, _b, _c, _d, _e, _f, _g, _mod) As DataTable
-        Dim comandoInsertar As SqlCommand = MetodosDatos.CrearComando
-        comandoInsertar.CommandText = "Insert into excel values (@No_Incidente, @Usuario, @Fecha_Creacion, @Prioridad, @Horas, @Fecha_Est, @Estado, @modulo)"
-        comandoInsertar.Parameters.Add("@No_Incidente", SqlDbType.NVarChar)
-        comandoInsertar.Parameters.Add("@Usuario", SqlDbType.NVarChar)
-        comandoInsertar.Parameters.Add("@Fecha_Creacion", SqlDbType.DateTime2)
-        comandoInsertar.Parameters.Add("@Prioridad", SqlDbType.NVarChar)
-        comandoInsertar.Parameters.Add("@Horas", SqlDbType.Int)
-        comandoInsertar.Parameters.Add("@Fecha_Est", SqlDbType.DateTime2)
-        comandoInsertar.Parameters.Add("@Estado", SqlDbType.NVarChar)
-        comandoInsertar.Parameters.Add("@modulo", SqlDbType.NVarChar)
+    'Public Shared Function InsertarSQL(_a, _b, _c, _d, _e, _f, _g, _mod) As DataTable
+    '    Dim comandoInsertar As SqlCommand = MetodosDatos.CrearComando
+    '    comandoInsertar.CommandText = "Insert into excel values (@No_Incidente, @Usuario, @Fecha_Creacion, @Prioridad, @Horas, @Fecha_Est, @Estado, @modulo)"
+    '    comandoInsertar.Parameters.Add("@No_Incidente", SqlDbType.NVarChar)
+    '    comandoInsertar.Parameters.Add("@Usuario", SqlDbType.NVarChar)
+    '    comandoInsertar.Parameters.Add("@Fecha_Creacion", SqlDbType.DateTime2)
+    '    comandoInsertar.Parameters.Add("@Prioridad", SqlDbType.NVarChar)
+    '    comandoInsertar.Parameters.Add("@Horas", SqlDbType.Int)
+    '    comandoInsertar.Parameters.Add("@Fecha_Est", SqlDbType.DateTime2)
+    '    comandoInsertar.Parameters.Add("@Estado", SqlDbType.NVarChar)
+    '    comandoInsertar.Parameters.Add("@modulo", SqlDbType.NVarChar)
 
-        comandoInsertar.Parameters("@No_Incidente").Value = _a
-        comandoInsertar.Parameters("@Usuario").Value = _b
-        comandoInsertar.Parameters("@Fecha_Creacion").Value = _c
-        comandoInsertar.Parameters("@Prioridad").Value = _d
-        comandoInsertar.Parameters("@Horas").Value = _e
-        comandoInsertar.Parameters("@Fecha_Est").Value = _f
-        comandoInsertar.Parameters("@Estado").Value = _g
-        comandoInsertar.Parameters("@modulo").Value = _mod
-        Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
-    End Function
+    '    comandoInsertar.Parameters("@No_Incidente").Value = _a
+    '    comandoInsertar.Parameters("@Usuario").Value = _b
+    '    comandoInsertar.Parameters("@Fecha_Creacion").Value = _c
+    '    comandoInsertar.Parameters("@Prioridad").Value = _d
+    '    comandoInsertar.Parameters("@Horas").Value = _e
+    '    comandoInsertar.Parameters("@Fecha_Est").Value = _f
+    '    comandoInsertar.Parameters("@Estado").Value = _g
+    '    comandoInsertar.Parameters("@modulo").Value = _mod
+    '    Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
+    'End Function
 
 
     Public Shared Function InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
@@ -133,6 +133,12 @@ Public Class AccesoDatos
     End Function
 
     Public Shared Function ResumenNuevos() As DataTable
+        Dim comando As SqlCommand = MetodosDatos.CrearComando
+        comando.CommandText = "SELECT * from excel"
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function CargarTabla() As DataTable
         Dim comando As SqlCommand = MetodosDatos.CrearComando
         comando.CommandText = "SELECT * from excel"
         Return MetodosDatos.EjecutarComandoSelect(comando)
