@@ -207,7 +207,7 @@ Partial Class Form1
         'ButtonInsertar
         '
         Me.ButtonInsertar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonInsertar.Location = New System.Drawing.Point(694, 78)
+        Me.ButtonInsertar.Location = New System.Drawing.Point(694, 46)
         Me.ButtonInsertar.Name = "ButtonInsertar"
         Me.ButtonInsertar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonInsertar.TabIndex = 2
@@ -217,7 +217,7 @@ Partial Class Form1
         'ButtonEliminar
         '
         Me.ButtonEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonEliminar.Location = New System.Drawing.Point(694, 107)
+        Me.ButtonEliminar.Location = New System.Drawing.Point(694, 75)
         Me.ButtonEliminar.Name = "ButtonEliminar"
         Me.ButtonEliminar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonEliminar.TabIndex = 3
@@ -227,7 +227,7 @@ Partial Class Form1
         'ButtonModificar
         '
         Me.ButtonModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonModificar.Location = New System.Drawing.Point(694, 136)
+        Me.ButtonModificar.Location = New System.Drawing.Point(694, 104)
         Me.ButtonModificar.Name = "ButtonModificar"
         Me.ButtonModificar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonModificar.TabIndex = 4
@@ -237,7 +237,7 @@ Partial Class Form1
         'ButtonActualizar
         '
         Me.ButtonActualizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonActualizar.Location = New System.Drawing.Point(694, 165)
+        Me.ButtonActualizar.Location = New System.Drawing.Point(694, 133)
         Me.ButtonActualizar.Name = "ButtonActualizar"
         Me.ButtonActualizar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonActualizar.TabIndex = 5
@@ -429,7 +429,7 @@ Partial Class Form1
         '
         Me.cbxPrincPrioReal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cbxPrincPrioReal.FormattingEnabled = True
-        Me.cbxPrincPrioReal.Items.AddRange(New Object() {"Emergencia", "Alta", "Media", "Baja"})
+        Me.cbxPrincPrioReal.Items.AddRange(New Object() {"", "Emergencia", "Alta", "Media", "Baja"})
         Me.cbxPrincPrioReal.Location = New System.Drawing.Point(118, 148)
         Me.cbxPrincPrioReal.Name = "cbxPrincPrioReal"
         Me.cbxPrincPrioReal.Size = New System.Drawing.Size(80, 21)

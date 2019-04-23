@@ -168,11 +168,25 @@ Public Class frmInsertar
     Private Sub btnInsertar_Click(sender As Object, e As EventArgs) Handles btnInsertar.Click
         Dim strIncidente As String = ""
         Dim strNull As String = ""
-        Dim datenull As DateTime = DateTime.MinValue
+        Dim datenull As DateTime = "1/1/1753 12:00:00 AM"
         strIncidente = "IN" + lblNumINC.Text
         If txtNombre.Text <> "" Then
-            AccesoLogica.InsertarInfoExcel(strIncidente, txtNombre.Text, lblFechaCreacion.Text, cbxPrioridad.SelectedItem.ToString, strNull, txtHoras.Text, txtFechaEstimada.Text, datenull, datenull, txtEstado.Text, cbxModulo.SelectedItem.ToString)
-            AccesoLogica.CargarTabla()
+            Try
+                AccesoLogica.InsertarInfoExcel(strIncidente, txtNombre.Text, lblFechaCreacion.Text, cbxPrioridad.SelectedItem.ToString, strNull, txtHoras.Text, txtFechaEstimada.Text, datenull, datenull, txtEstado.Text, cbxModulo.SelectedItem.ToString)
+                Dim x As DataTable
+                Dim s As String
+                Dim sb As Integer = 1
+                x = AccesoLogica.LastRow()
+                If x.Rows.Count > 0 Then
+                    s = x.Rows(0).Item(0)
+                    sb = Convert.ToInt32(Strings.Mid(s, 3) + 1)
+                End If
+                lblNumINC.Text = sb
+                MsgBox("Incidente insertado exitosamente")
+            Catch ex As Exception
+                MsgBox("Error al insertar nuevo Incidente")
+            End Try
+
         Else
             MsgBox("Debe llenar todos los espacios")
         End If

@@ -25,6 +25,7 @@ Public Class Form1
         LabelCargando.Visible = False
         Dim tbldtgPrincipal As DataTable
         tbldtgPrincipal = AccesoLogica.CargarTabla()
+        tblGlobal = tbldtgPrincipal
         If tbldtgPrincipal.Rows.Count > 0 Then
             DataGridViewPrincipal.DataSource = tbldtgPrincipal
             ColoresTalbla()
@@ -78,7 +79,7 @@ Public Class Form1
         cbxPrincPrioReal.Enabled = True
         txtPrincUsuario.Enabled = True
 
-
+        'tblGlobal.Rows(0).
 
     End Sub
 
@@ -87,6 +88,7 @@ Public Class Form1
         ButtonEliminar.Visible = True
         ButtonModificar.Visible = True
         ButtonActualizar.Visible = False
+
     End Sub
 
     Private Sub ButtonCargarExcel_Click(sender As Object, e As EventArgs) Handles ButtonCargarExcel.Click
@@ -150,4 +152,41 @@ Public Class Form1
 
     End Sub
 
+    Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
+        Dim tbldtgPrincipal As DataTable
+        tbldtgPrincipal = AccesoLogica.CargarTabla()
+        tblGlobal = tbldtgPrincipal
+        If tbldtgPrincipal.Rows.Count > 0 Then
+            DataGridViewPrincipal.DataSource = tbldtgPrincipal
+            ColoresTalbla()
+        End If
+    End Sub
+
+    Private Sub DataGridViewPrincipal_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridViewPrincipal.SelectionChanged
+        intGlobalIndex = DataGridViewPrincipal.CurrentCell.RowIndex
+        txtPrincIncidente.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(0).Value
+        txtPrincUsuario.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(1).Value
+        txtPrincFechaCrea.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(2).Value
+        txtPrincPrioridad.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(3).Value
+        If DataGridViewPrincipal.Rows(intGlobalIndex).Cells(4).Value = "" Then
+            cbxPrincPrioReal.SelectedIndex = 0
+        Else
+            Select Case DataGridViewPrincipal.Rows(intGlobalIndex).Cells(4).Value
+                Case "Emergencia"
+                    cbxPrincPrioReal.SelectedIndex = 1
+                Case "Alta"
+                    cbxPrincPrioReal.SelectedIndex = 2
+                Case "Media"
+                    cbxPrincPrioReal.SelectedIndex = 3
+                Case "Baja"
+                    cbxPrincPrioReal.SelectedIndex = 4
+            End Select
+        End If
+        txtPrincHoras.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(5).Value
+        txtPrincFechaEst.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(6).Value
+        dtpPrincAsignado.Value = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(7).Value
+        dtpPrincResol.Value = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(8).Value
+        txtPrincEstado.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(9).Value
+        cbxPrincModulo.SelectedItem = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(10).Value
+    End Sub
 End Class
