@@ -22,7 +22,9 @@ Public Class AccesoDatos
             excelDTA.Fill(excelDTS, "[Hoja1$]")
             excelconn.Close()
         End If
+#Disable Warning BC42104 ' Variable is used before it has been assigned a value
         Return excelDTS
+#Enable Warning BC42104 ' Variable is used before it has been assigned a value
     End Function
 
     Public Shared Function LastRow() As DataTable
@@ -110,13 +112,15 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(_comando)
     End Function
 
-    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final) As DataTable
+    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final, modulo) As DataTable
         Dim comando As SqlCommand = MetodosDatos.ComandoSP
         comando.CommandText = "FiltrosResumenModuloAfectados"
         comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
         comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters.Add("@modulo", SqlDbType.NVarChar)
         comando.Parameters("@fecha_inicio").Value = fecha_inicio
         comando.Parameters("@fecha_final").Value = fecha_final
+        comando.Parameters("@modulo").Value = modulo
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 

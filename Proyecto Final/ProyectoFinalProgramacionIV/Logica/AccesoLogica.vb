@@ -22,8 +22,8 @@ Public Class AccesoLogica
         Return AccesoDatos.LastRow()
     End Function
 
-    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final) As DataTable
-        Return AccesoDatos.FiltrarResumenModuloAfectado(fecha_inicio, fecha_final)
+    Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final, modulo) As DataTable
+        Return AccesoDatos.FiltrarResumenModuloAfectado(fecha_inicio, fecha_final, modulo)
     End Function
 
     Public Shared Function ResumenIncidentesMora() As DataTable
