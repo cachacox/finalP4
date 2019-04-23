@@ -243,6 +243,7 @@ Partial Class Form1
         Me.ButtonActualizar.TabIndex = 5
         Me.ButtonActualizar.Text = "Actualizar"
         Me.ButtonActualizar.UseVisualStyleBackColor = True
+        Me.ButtonActualizar.Visible = False
         '
         'Label2
         '
