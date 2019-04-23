@@ -42,6 +42,26 @@ Partial Class Form1
         Me.ButtonActualizar = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.txtPrincIncidente = New System.Windows.Forms.TextBox()
+        Me.txtPrincUsuario = New System.Windows.Forms.TextBox()
+        Me.txtPrincFechaCrea = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtPrincHoras = New System.Windows.Forms.TextBox()
+        Me.txtPrincFechaEst = New System.Windows.Forms.TextBox()
+        Me.txtPrincEstado = New System.Windows.Forms.TextBox()
+        Me.txtPrincPrioridad = New System.Windows.Forms.TextBox()
+        Me.dtpPrincAsignado = New System.Windows.Forms.DateTimePicker()
+        Me.dtpPrincResol = New System.Windows.Forms.DateTimePicker()
+        Me.cbxPrincModulo = New System.Windows.Forms.ComboBox()
+        Me.cbxPrincPrioReal = New System.Windows.Forms.ComboBox()
         Me.PanelResumen.SuspendLayout()
         CType(Me.DataGridViewPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -62,7 +82,7 @@ Partial Class Form1
         Me.PanelResumen.Controls.Add(Me.ButtonIncidentesPendientes)
         Me.PanelResumen.Controls.Add(Me.ButtonIncidentesMora)
         Me.PanelResumen.Controls.Add(Me.ButtonModulosAfectados)
-        Me.PanelResumen.Location = New System.Drawing.Point(677, 2)
+        Me.PanelResumen.Location = New System.Drawing.Point(784, 2)
         Me.PanelResumen.Name = "PanelResumen"
         Me.PanelResumen.Size = New System.Drawing.Size(153, 422)
         Me.PanelResumen.TabIndex = 0
@@ -181,13 +201,13 @@ Partial Class Form1
         Me.DataGridViewPrincipal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridViewPrincipal.Location = New System.Drawing.Point(12, 197)
         Me.DataGridViewPrincipal.Name = "DataGridViewPrincipal"
-        Me.DataGridViewPrincipal.Size = New System.Drawing.Size(650, 218)
+        Me.DataGridViewPrincipal.Size = New System.Drawing.Size(757, 218)
         Me.DataGridViewPrincipal.TabIndex = 1
         '
         'ButtonInsertar
         '
         Me.ButtonInsertar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonInsertar.Location = New System.Drawing.Point(587, 78)
+        Me.ButtonInsertar.Location = New System.Drawing.Point(694, 78)
         Me.ButtonInsertar.Name = "ButtonInsertar"
         Me.ButtonInsertar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonInsertar.TabIndex = 2
@@ -197,7 +217,7 @@ Partial Class Form1
         'ButtonEliminar
         '
         Me.ButtonEliminar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonEliminar.Location = New System.Drawing.Point(587, 107)
+        Me.ButtonEliminar.Location = New System.Drawing.Point(694, 107)
         Me.ButtonEliminar.Name = "ButtonEliminar"
         Me.ButtonEliminar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonEliminar.TabIndex = 3
@@ -207,7 +227,7 @@ Partial Class Form1
         'ButtonModificar
         '
         Me.ButtonModificar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonModificar.Location = New System.Drawing.Point(587, 136)
+        Me.ButtonModificar.Location = New System.Drawing.Point(694, 136)
         Me.ButtonModificar.Name = "ButtonModificar"
         Me.ButtonModificar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonModificar.TabIndex = 4
@@ -217,7 +237,7 @@ Partial Class Form1
         'ButtonActualizar
         '
         Me.ButtonActualizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ButtonActualizar.Location = New System.Drawing.Point(587, 165)
+        Me.ButtonActualizar.Location = New System.Drawing.Point(694, 165)
         Me.ButtonActualizar.Name = "ButtonActualizar"
         Me.ButtonActualizar.Size = New System.Drawing.Size(75, 23)
         Me.ButtonActualizar.TabIndex = 5
@@ -227,26 +247,219 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 13)
+        Me.Label2.Location = New System.Drawing.Point(16, 15)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(74, 13)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Label2"
+        Me.Label2.Text = "No. Incidente:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(16, 40)
+        Me.Label3.Location = New System.Drawing.Point(16, 50)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(39, 13)
+        Me.Label3.Size = New System.Drawing.Size(46, 13)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "Label3"
+        Me.Label3.Text = "Usuario:"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(16, 85)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Fecha Creación:"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(19, 121)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(51, 13)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "Prioridad:"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(19, 157)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(76, 13)
+        Me.Label6.TabIndex = 10
+        Me.Label6.Text = "Prioridad Real:"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(335, 128)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(43, 13)
+        Me.Label7.TabIndex = 15
+        Me.Label7.Text = "Estado:"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(333, 97)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(96, 13)
+        Me.Label8.TabIndex = 14
+        Me.Label8.Text = "Fecha Resolución:"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(332, 66)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(87, 13)
+        Me.Label9.TabIndex = 13
+        Me.Label9.Text = "Fecha Asignado:"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(333, 40)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(86, 13)
+        Me.Label10.TabIndex = 12
+        Me.Label10.Text = "Fecha Estimada:"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(332, 15)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(38, 13)
+        Me.Label11.TabIndex = 11
+        Me.Label11.Text = "Horas:"
+        '
+        'txtPrincIncidente
+        '
+        Me.txtPrincIncidente.Enabled = False
+        Me.txtPrincIncidente.Location = New System.Drawing.Point(118, 12)
+        Me.txtPrincIncidente.Name = "txtPrincIncidente"
+        Me.txtPrincIncidente.Size = New System.Drawing.Size(80, 20)
+        Me.txtPrincIncidente.TabIndex = 16
+        '
+        'txtPrincUsuario
+        '
+        Me.txtPrincUsuario.Enabled = False
+        Me.txtPrincUsuario.Location = New System.Drawing.Point(118, 43)
+        Me.txtPrincUsuario.Name = "txtPrincUsuario"
+        Me.txtPrincUsuario.Size = New System.Drawing.Size(132, 20)
+        Me.txtPrincUsuario.TabIndex = 17
+        '
+        'txtPrincFechaCrea
+        '
+        Me.txtPrincFechaCrea.Enabled = False
+        Me.txtPrincFechaCrea.Location = New System.Drawing.Point(118, 78)
+        Me.txtPrincFechaCrea.Name = "txtPrincFechaCrea"
+        Me.txtPrincFechaCrea.Size = New System.Drawing.Size(190, 20)
+        Me.txtPrincFechaCrea.TabIndex = 18
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(335, 164)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(45, 13)
+        Me.Label12.TabIndex = 21
+        Me.Label12.Text = "Módulo:"
+        '
+        'txtPrincHoras
+        '
+        Me.txtPrincHoras.Enabled = False
+        Me.txtPrincHoras.Location = New System.Drawing.Point(430, 8)
+        Me.txtPrincHoras.Name = "txtPrincHoras"
+        Me.txtPrincHoras.Size = New System.Drawing.Size(43, 20)
+        Me.txtPrincHoras.TabIndex = 22
+        '
+        'txtPrincFechaEst
+        '
+        Me.txtPrincFechaEst.Enabled = False
+        Me.txtPrincFechaEst.Location = New System.Drawing.Point(430, 37)
+        Me.txtPrincFechaEst.Name = "txtPrincFechaEst"
+        Me.txtPrincFechaEst.Size = New System.Drawing.Size(140, 20)
+        Me.txtPrincFechaEst.TabIndex = 23
+        '
+        'txtPrincEstado
+        '
+        Me.txtPrincEstado.Enabled = False
+        Me.txtPrincEstado.Location = New System.Drawing.Point(430, 125)
+        Me.txtPrincEstado.Name = "txtPrincEstado"
+        Me.txtPrincEstado.Size = New System.Drawing.Size(80, 20)
+        Me.txtPrincEstado.TabIndex = 26
+        '
+        'txtPrincPrioridad
+        '
+        Me.txtPrincPrioridad.Enabled = False
+        Me.txtPrincPrioridad.Location = New System.Drawing.Point(118, 114)
+        Me.txtPrincPrioridad.Name = "txtPrincPrioridad"
+        Me.txtPrincPrioridad.Size = New System.Drawing.Size(80, 20)
+        Me.txtPrincPrioridad.TabIndex = 20
+        '
+        'dtpPrincAsignado
+        '
+        Me.dtpPrincAsignado.Enabled = False
+        Me.dtpPrincAsignado.Location = New System.Drawing.Point(430, 66)
+        Me.dtpPrincAsignado.Name = "dtpPrincAsignado"
+        Me.dtpPrincAsignado.Size = New System.Drawing.Size(200, 20)
+        Me.dtpPrincAsignado.TabIndex = 28
+        '
+        'dtpPrincResol
+        '
+        Me.dtpPrincResol.Enabled = False
+        Me.dtpPrincResol.Location = New System.Drawing.Point(430, 95)
+        Me.dtpPrincResol.Name = "dtpPrincResol"
+        Me.dtpPrincResol.Size = New System.Drawing.Size(200, 20)
+        Me.dtpPrincResol.TabIndex = 29
+        '
+        'cbxPrincModulo
+        '
+        Me.cbxPrincModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxPrincModulo.FormattingEnabled = True
+        Me.cbxPrincModulo.Items.AddRange(New Object() {"AIA", "AIA - Integracion Siebel", "ATV", "ATV - Error Datos", "ATV Error Datos", "BEM - Invoice", "BO", "BRM  - Invoice", "BRM - Ajuste", "BRM - Ajustes", "BRM - Billing", "BRM - Collections ", "BRM - Cuentas", "BRM -- Cuentas", "BRM - Facturacion", "BRM - GL", "BRM - Invoice", "BRM - Pricing", "BRM - Raring", "BRM - Rating", "BRM - Roaming", "BRM - Tasacion", "BRM . Cuentas", "BRM -Ajustes", "BRM- Invoice", "Concilia", "Concilia ", "CRM", "CRM - Datos", "CRM Aplicativo", "GUI - Operativa", "GUI - Operativa Error Humano", "ICEPAD", "Infraestrucutra", "Integracion - BRM", "Integracion - Legados ", "Integracion - Legados - Cofra", "Integracion - Legados - Compra", "Integracion - Legados - Gepa", "Integracion - Legados - Notificacion", "Integracion - Legados - Remo", "Integracion - Legados -Gepa", "Integracion - Legados- Remo", "Integracion - Siebel", "Integracon - Legados - Gepa", "Integracon - Siebel", "Intregracion - BRM", "Migracion", "MZ", "N/A", "Portabilidad", "Portal Corporativo", "Reportes", "Sincronizacion Datos"})
+        Me.cbxPrincModulo.Location = New System.Drawing.Point(430, 155)
+        Me.cbxPrincModulo.Name = "cbxPrincModulo"
+        Me.cbxPrincModulo.Size = New System.Drawing.Size(121, 21)
+        Me.cbxPrincModulo.TabIndex = 30
+        '
+        'cbxPrincPrioReal
+        '
+        Me.cbxPrincPrioReal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxPrincPrioReal.FormattingEnabled = True
+        Me.cbxPrincPrioReal.Items.AddRange(New Object() {"Emergencia", "Alta", "Media", "Baja"})
+        Me.cbxPrincPrioReal.Location = New System.Drawing.Point(118, 148)
+        Me.cbxPrincPrioReal.Name = "cbxPrincPrioReal"
+        Me.cbxPrincPrioReal.Size = New System.Drawing.Size(80, 21)
+        Me.cbxPrincPrioReal.TabIndex = 31
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(832, 427)
+        Me.ClientSize = New System.Drawing.Size(939, 427)
+        Me.Controls.Add(Me.cbxPrincPrioReal)
+        Me.Controls.Add(Me.cbxPrincModulo)
+        Me.Controls.Add(Me.dtpPrincResol)
+        Me.Controls.Add(Me.dtpPrincAsignado)
+        Me.Controls.Add(Me.txtPrincEstado)
+        Me.Controls.Add(Me.txtPrincFechaEst)
+        Me.Controls.Add(Me.txtPrincHoras)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.txtPrincPrioridad)
+        Me.Controls.Add(Me.txtPrincFechaCrea)
+        Me.Controls.Add(Me.txtPrincUsuario)
+        Me.Controls.Add(Me.txtPrincIncidente)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.ButtonActualizar)
@@ -286,4 +499,24 @@ Partial Class Form1
     Friend WithEvents LabelCargando As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents txtPrincIncidente As TextBox
+    Friend WithEvents txtPrincUsuario As TextBox
+    Friend WithEvents txtPrincFechaCrea As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents txtPrincHoras As TextBox
+    Friend WithEvents txtPrincFechaEst As TextBox
+    Friend WithEvents txtPrincEstado As TextBox
+    Friend WithEvents txtPrincPrioridad As TextBox
+    Friend WithEvents dtpPrincAsignado As DateTimePicker
+    Friend WithEvents dtpPrincResol As DateTimePicker
+    Friend WithEvents cbxPrincModulo As ComboBox
+    Friend WithEvents cbxPrincPrioReal As ComboBox
 End Class

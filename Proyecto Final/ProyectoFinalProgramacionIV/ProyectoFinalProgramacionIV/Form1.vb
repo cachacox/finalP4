@@ -71,6 +71,15 @@ Public Class Form1
         ButtonEliminar.Visible = False
         ButtonModificar.Visible = False
         ButtonActualizar.Visible = True
+
+        cbxPrincModulo.Enabled = True
+        dtpPrincResol.Enabled = True
+        dtpPrincAsignado.Enabled = True
+        cbxPrincPrioReal.Enabled = True
+        txtPrincUsuario.Enabled = True
+
+
+
     End Sub
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
