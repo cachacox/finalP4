@@ -100,6 +100,7 @@ Partial Class ModulosAfectados
         '
         'ComboBoxFiltro
         '
+        Me.ComboBoxFiltro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBoxFiltro.FormattingEnabled = True
         Me.ComboBoxFiltro.Location = New System.Drawing.Point(60, 12)
         Me.ComboBoxFiltro.Name = "ComboBoxFiltro"
