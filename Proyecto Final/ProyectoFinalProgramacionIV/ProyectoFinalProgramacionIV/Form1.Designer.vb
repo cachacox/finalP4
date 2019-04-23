@@ -388,7 +388,7 @@ Partial Class Form1
         Me.txtPrincEstado.Enabled = False
         Me.txtPrincEstado.Location = New System.Drawing.Point(430, 125)
         Me.txtPrincEstado.Name = "txtPrincEstado"
-        Me.txtPrincEstado.Size = New System.Drawing.Size(80, 20)
+        Me.txtPrincEstado.Size = New System.Drawing.Size(140, 20)
         Me.txtPrincEstado.TabIndex = 26
         '
         'txtPrincPrioridad
