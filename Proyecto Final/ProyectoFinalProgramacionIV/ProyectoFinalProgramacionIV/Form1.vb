@@ -87,11 +87,18 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
+        'acá meter el código
+
         ButtonInsertar.Visible = True
         ButtonEliminar.Visible = True
         ButtonModificar.Visible = True
         ButtonActualizar.Visible = False
-
+        cbxPrincModulo.Enabled = False
+        dtpPrincResol.Enabled = False
+        dtpPrincAsignado.Enabled = False
+        cbxPrincPrioReal.Enabled = False
+        txtPrincUsuario.Enabled = False
+        renewTabla()
     End Sub
 
     Private Sub ButtonCargarExcel_Click(sender As Object, e As EventArgs) Handles ButtonCargarExcel.Click
@@ -181,5 +188,9 @@ Public Class Form1
         dtpPrincResol.Value = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(8).Value
         txtPrincEstado.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(9).Value
         cbxPrincModulo.SelectedItem = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(10).Value
+    End Sub
+
+    Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        renewTabla()
     End Sub
 End Class
