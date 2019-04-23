@@ -89,6 +89,14 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(_comando)
     End Function
 
+    Public Shared Function BorrarInfo(_incid) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.CrearComando
+        comando.CommandText = "delete from excel where No_Incidente = @incidente"
+        comando.Parameters.Add("@incidente", SqlDbType.NVarChar)
+        comando.Parameters("@incidente").Value = _incid
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
     Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final, modulo) As DataTable
         Dim comando As SqlCommand = MetodosDatos.ComandoSP
         comando.CommandText = "FiltrosResumenModuloAfectados"

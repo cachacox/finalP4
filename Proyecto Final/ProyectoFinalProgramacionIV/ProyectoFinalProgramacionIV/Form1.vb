@@ -19,18 +19,19 @@ Public Class Form1
         Next
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Shared Sub renewTabla()
+        tbldtgPrincipal = AccesoLogica.CargarTabla()
+        If tbldtgPrincipal.Rows.Count > 0 Then
+            Form1.DataGridViewPrincipal.DataSource = tbldtgPrincipal
+            Form1.ColoresTalbla()
+        End If
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs)
         ButtonActualizar.Visible = False
         ProgressBar.Visible = False
         LabelCargando.Visible = False
-        Dim tbldtgPrincipal As DataTable
-        tbldtgPrincipal = AccesoLogica.CargarTabla()
-        tblGlobal = tbldtgPrincipal
-        If tbldtgPrincipal.Rows.Count > 0 Then
-            DataGridViewPrincipal.DataSource = tbldtgPrincipal
-            ColoresTalbla()
-        End If
-
+        renewTabla()
     End Sub
 
     Private Sub ButtonModulosAfectados_Click(sender As Object, e As EventArgs) Handles ButtonModulosAfectados.Click
@@ -64,7 +65,12 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
-
+        Dim intRespuesta As Integer = MsgBox("Desea borrar la carrera?", vbYesNo)
+        If intRespuesta = 6 Then
+            strGlobalIncid = txtPrincIncidente.Text
+            AccesoLogica.BorrarInfo(strGlobalIncid)
+            renewTabla()
+        End If
     End Sub
 
     Private Sub ButtonModificar_Click(sender As Object, e As EventArgs) Handles ButtonModificar.Click
@@ -78,9 +84,6 @@ Public Class Form1
         dtpPrincAsignado.Enabled = True
         cbxPrincPrioReal.Enabled = True
         txtPrincUsuario.Enabled = True
-
-        'tblGlobal.Rows(0).
-
     End Sub
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
@@ -150,16 +153,6 @@ Public Class Form1
         ProgressBar.Visible = False
         LabelCargando.Visible = False
 
-    End Sub
-
-    Private Sub Form1_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
-        Dim tbldtgPrincipal As DataTable
-        tbldtgPrincipal = AccesoLogica.CargarTabla()
-        tblGlobal = tbldtgPrincipal
-        If tbldtgPrincipal.Rows.Count > 0 Then
-            DataGridViewPrincipal.DataSource = tbldtgPrincipal
-            ColoresTalbla()
-        End If
     End Sub
 
     Private Sub DataGridViewPrincipal_SelectionChanged(sender As Object, e As EventArgs) Handles DataGridViewPrincipal.SelectionChanged

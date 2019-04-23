@@ -1,4 +1,5 @@
 ﻿Imports Logica
+Imports ProyectoFinalProgramacionIV
 Public Class frmInsertar
     Private Sub frmInsertar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim x As DataTable
@@ -183,6 +184,7 @@ Public Class frmInsertar
                 End If
                 lblNumINC.Text = sb
                 MsgBox("Incidente insertado exitosamente")
+                Form1.renewTabla()
             Catch ex As Exception
                 MsgBox("Error al insertar nuevo Incidente")
             End Try
