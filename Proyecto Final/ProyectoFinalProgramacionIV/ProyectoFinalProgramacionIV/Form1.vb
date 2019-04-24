@@ -27,10 +27,6 @@ Public Class Form1
         End If
     End Sub
 
-    'Private Sub Form1_Load(sender As Object, e As EventArgs)
-
-    'End Sub
-
     Private Sub ButtonModulosAfectados_Click(sender As Object, e As EventArgs) Handles ButtonModulosAfectados.Click
         Dim VentanaModulosAfectados = New ModulosAfectados()
         VentanaModulosAfectados.ShowDialog()
@@ -85,19 +81,19 @@ Public Class Form1
 
     Sub DeterminaHoras(_str)
         Dim estimado As DateTime
-        Dim _ano As Integer = Date.Today.Year
-        Dim _mes As Integer = Date.Today.Month
-        Dim _dia As Integer = Date.Today.Day
+        Dim _ano As Integer = dttfecha1.Date.Year 'Date.Today.Year
+        Dim _mes As Integer = dttfecha1.Date.Month 'Date.Today.Month
+        Dim _dia As Integer = dttfecha1.Date.Day 'Date.Today.Day
         'Dim _temp As Integer = 23 'borrar esto, es para pruebas
-        Dim _hora As Decimal = Math.Round(Now().Hour + (Now().Minute / 60), 2)
-        Dim _fechas As Date = Today()
+        Dim _hora As Decimal = Math.Round(dttfecha1.Hour + (dttfecha1.Minute / 60), 2)
+        Dim _fechas As Date = dttfecha1
         Dim _flag As Boolean = False
         Dim strFecha As String
         Dim intLen As Integer
 
-        If _fechas.DayOfWeek = DayOfWeek.Saturday Then
+        If dttfecha1.DayOfWeek = DayOfWeek.Saturday Then
             _dia = _dia + 2
-        ElseIf _fechas.DayOfWeek = DayOfWeek.Sunday Then
+        ElseIf dttfecha1.DayOfWeek = DayOfWeek.Sunday Then
             _dia = _dia + 1
         End If
 
@@ -118,110 +114,117 @@ Public Class Form1
                     Else
                         txtPrincFechaEst.Text = _datemp
                     End If
-
-                    'Case "Media"
-                    '    Dim startime As DateTimeOffset
-                    '    Dim startOfShift As DateTimeOffset
-                    '    Dim intDiff As Double
-                    '    startime = New DateTimeOffset(_ano, _mes, _dia, 0, 0, 0, DateTimeOffset.Now.Offset) 'volver a poner _dia
-                    '    startOfShift = startime.AddHours(8)
-                    '    If _hora >= 16 And _fechas.DayOfWeek <> DayOfWeek.Saturday And _fechas.DayOfWeek <> DayOfWeek.Sunday Then
-                    '        startOfShift = startOfShift.AddDays(1)
-                    '    End If
-                    '    Dim intHoras As Integer = 0
-                    '    If _fechas.DayOfWeek = DayOfWeek.Saturday Or _fechas.DayOfWeek = DayOfWeek.Sunday Then
-                    '        While (intHoras < 32)
-                    '            If startOfShift.Hour = 16 Then
-                    '                intHoras = intHoras + 8
-                    '            End If
-                    '            startOfShift = startOfShift.AddHours(8)
-                    '        End While
-                    '        strFecha = startOfShift.AddHours(-8).ToString
-                    '        intLen = strFecha.Length - 7
-                    '        txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
-                    '    Else
-                    '        If _hora > startOfShift.Hour And _flag = False Then
-                    '            intDiff = Math.Round((_hora - startOfShift.Hour), 2)
-                    '            If intDiff > 8 Then
-                    '                intDiff = intDiff - Int(intDiff)
-                    '            End If
-                    '            _flag = True
-                    '        End If
-                    '        While (intHoras < 32)
-                    '            If startOfShift.Hour = 16 Then
-                    '                intHoras = intHoras + 8
-                    '            End If
-                    '            startOfShift = startOfShift.AddHours(8)
-                    '            If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 32 Then
-                    '                startOfShift = startOfShift.AddDays(2)
-                    '            ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 32 Then
-                    '                startOfShift = startOfShift.AddDays(1)
-                    '            End If
-                    '        End While
-                    '        If intDiff > 0 Then
-                    '            strFecha = startOfShift.AddHours(8 + intDiff).ToString
-                    '            intLen = strFecha.Length - 7
-                    '        Else
-                    '            strFecha = startOfShift.AddHours(-8).ToString
-                    '            intLen = strFecha.Length - 7
-                    '        End If
-                    '        txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
-                    '    End If
-                    'Case "Baja"
-                    '    '96 horas
-                    '    Dim startime As DateTimeOffset
-                    '    Dim startOfShift As DateTimeOffset
-                    '    Dim intDiff As Double
-                    '    startime = New DateTimeOffset(_ano, _mes, _dia, 0, 0, 0, DateTimeOffset.Now.Offset) 'volver a poner _dia
-                    '    startOfShift = startime.AddHours(8)
-                    '    If _hora >= 16 And _fechas.DayOfWeek <> DayOfWeek.Saturday And _fechas.DayOfWeek <> DayOfWeek.Sunday Then
-                    '        startOfShift = startOfShift.AddDays(1)
-                    '    End If
-                    '    Dim intHoras As Integer = 0
-                    '    If _fechas.DayOfWeek = DayOfWeek.Saturday Or _fechas.DayOfWeek = DayOfWeek.Sunday Then
-                    '        While (intHoras < 96)
-                    '            If startOfShift.Hour = 16 Then
-                    '                intHoras = intHoras + 8
-                    '            End If
-                    '            startOfShift = startOfShift.AddHours(8)
-                    '            If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 96 Then
-                    '                startOfShift = startOfShift.AddDays(2)
-                    '            ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 96 Then
-                    '                startOfShift = startOfShift.AddDays(1)
-                    '            End If
-                    '        End While
-                    '        strFecha = startOfShift.AddHours(-8).ToString
-                    '        intLen = strFecha.Length - 7
-                    '        txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
-                    '    Else
-                    '        'este if es si ya empezó el día, por ejemplo, el tiquete lo abren después de las 8
-                    '        If _hora > startOfShift.Hour And _flag = False Then
-                    '            intDiff = Math.Round((_hora - startOfShift.Hour), 2)
-                    '            If intDiff > 8 Then
-                    '                intDiff = intDiff - Int(intDiff)
-                    '            End If
-                    '            _flag = True
-                    '        End If
-                    '        While (intHoras < 96)
-                    '            If startOfShift.Hour = 16 Then
-                    '                intHoras = intHoras + 8
-                    '            End If
-                    '            startOfShift = startOfShift.AddHours(8)
-                    '            If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 96 Then
-                    '                startOfShift = startOfShift.AddDays(2)
-                    '            ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 96 Then
-                    '                startOfShift = startOfShift.AddDays(1)
-                    '            End If
-                    '        End While
-                    '        If intDiff > 0 Then
-                    '            strFecha = startOfShift.AddHours(8 + intDiff).ToString
-                    '            intLen = strFecha.Length - 7
-                    '        Else
-                    '            strFecha = startOfShift.AddHours(-8).ToString
-                    '            intLen = strFecha.Length - 7
-                    '        End If
-                    '        txtFechaEstimada.Text = Strings.Left(strFecha, intLen)
-                    '    End If
+                Case "Media"
+                    If Not __flag Then
+                        Dim startime As DateTimeOffset
+                        Dim startOfShift As DateTimeOffset
+                        Dim intDiff As Double
+                        startime = New DateTimeOffset(_ano, _mes, _dia, 0, 0, 0, DateTimeOffset.Now.Offset) 'volver a poner _dia
+                        startOfShift = startime.AddHours(8)
+                        If _hora >= 16 And _fechas.DayOfWeek <> DayOfWeek.Saturday And _fechas.DayOfWeek <> DayOfWeek.Sunday Then
+                            startOfShift = startOfShift.AddDays(1)
+                        End If
+                        Dim intHoras As Integer = 0
+                        If _fechas.DayOfWeek = DayOfWeek.Saturday Or _fechas.DayOfWeek = DayOfWeek.Sunday Then
+                            While (intHoras < 32)
+                                If startOfShift.Hour = 16 Then
+                                    intHoras = intHoras + 8
+                                End If
+                                startOfShift = startOfShift.AddHours(8)
+                            End While
+                            strFecha = startOfShift.AddHours(-8).ToString
+                            intLen = strFecha.Length - 7
+                            txtPrincFechaEst.Text = Strings.Left(strFecha, intLen)
+                        Else
+                            If _hora > startOfShift.Hour And _flag = False Then
+                                intDiff = Math.Round((_hora - startOfShift.Hour), 2)
+                                If intDiff > 8 Then
+                                    intDiff = intDiff - Int(intDiff)
+                                End If
+                                _flag = True
+                            End If
+                            While (intHoras < 32)
+                                If startOfShift.Hour = 16 Then
+                                    intHoras = intHoras + 8
+                                End If
+                                startOfShift = startOfShift.AddHours(8)
+                                If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 32 Then
+                                    startOfShift = startOfShift.AddDays(2)
+                                ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 32 Then
+                                    startOfShift = startOfShift.AddDays(1)
+                                End If
+                            End While
+                            If intDiff > 0 Then
+                                strFecha = startOfShift.AddHours(8 + intDiff).ToString
+                                intLen = strFecha.Length - 7
+                            Else
+                                strFecha = startOfShift.AddHours(-8).ToString
+                                intLen = strFecha.Length - 7
+                            End If
+                            txtPrincFechaEst.Text = Strings.Left(strFecha, intLen)
+                        End If
+                    Else
+                        txtPrincFechaEst.Text = _datemp
+                    End If
+                Case "Baja"
+                    '96 horas
+                    If Not __flag Then
+                        Dim startime As DateTimeOffset
+                        Dim startOfShift As DateTimeOffset
+                        Dim intDiff As Double
+                        startime = New DateTimeOffset(_ano, _mes, _dia, 0, 0, 0, DateTimeOffset.Now.Offset) 'volver a poner _dia
+                        startOfShift = startime.AddHours(8)
+                        If _hora >= 16 And _fechas.DayOfWeek <> DayOfWeek.Saturday And _fechas.DayOfWeek <> DayOfWeek.Sunday Then
+                            startOfShift = startOfShift.AddDays(1)
+                        End If
+                        Dim intHoras As Integer = 0
+                        If _fechas.DayOfWeek = DayOfWeek.Saturday Or _fechas.DayOfWeek = DayOfWeek.Sunday Then
+                            While (intHoras < 96)
+                                If startOfShift.Hour = 16 Then
+                                    intHoras = intHoras + 8
+                                End If
+                                startOfShift = startOfShift.AddHours(8)
+                                If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 96 Then
+                                    startOfShift = startOfShift.AddDays(2)
+                                ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 96 Then
+                                    startOfShift = startOfShift.AddDays(1)
+                                End If
+                            End While
+                            strFecha = startOfShift.AddHours(-8).ToString
+                            intLen = strFecha.Length - 7
+                            txtPrincFechaEst.Text = Strings.Left(strFecha, intLen)
+                        Else
+                            'este if es si ya empezó el día, por ejemplo, el tiquete lo abren después de las 8
+                            If _hora > startOfShift.Hour And _flag = False Then
+                                intDiff = Math.Round((_hora - startOfShift.Hour), 2)
+                                If intDiff > 8 Then
+                                    intDiff = intDiff - Int(intDiff)
+                                End If
+                                _flag = True
+                            End If
+                            While (intHoras < 96)
+                                If startOfShift.Hour = 16 Then
+                                    intHoras = intHoras + 8
+                                End If
+                                startOfShift = startOfShift.AddHours(8)
+                                If startOfShift.DayOfWeek = DayOfWeek.Saturday And intHoras < 96 Then
+                                    startOfShift = startOfShift.AddDays(2)
+                                ElseIf startOfShift.DayOfWeek = DayOfWeek.Sunday And intHoras < 96 Then
+                                    startOfShift = startOfShift.AddDays(1)
+                                End If
+                            End While
+                            If intDiff > 0 Then
+                                strFecha = startOfShift.AddHours(8 + intDiff).ToString
+                                intLen = strFecha.Length - 7
+                            Else
+                                strFecha = startOfShift.AddHours(-8).ToString
+                                intLen = strFecha.Length - 7
+                            End If
+                            txtPrincFechaEst.Text = Strings.Left(strFecha, intLen)
+                        End If
+                    Else
+                        txtPrincFechaEst.Text = _datemp
+                    End If
             End Select
         End If
     End Sub
@@ -309,18 +312,23 @@ Public Class Form1
         txtPrincUsuario.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(1).Value
         txtPrincFechaCrea.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(2).Value
         txtPrincPrioridad.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(3).Value
+        _priori = txtPrincPrioridad.Text
         If DataGridViewPrincipal.Rows(intGlobalIndex).Cells(4).Value = "" Then
             cbxPrincPrioReal.SelectedIndex = 0
         Else
             Select Case DataGridViewPrincipal.Rows(intGlobalIndex).Cells(4).Value
                 Case "Emergencia"
                     cbxPrincPrioReal.SelectedIndex = 1
+                    _prioriReal = cbxPrincPrioReal.SelectedItem
                 Case "Alta"
                     cbxPrincPrioReal.SelectedIndex = 2
+                    _prioriReal = cbxPrincPrioReal.SelectedItem
                 Case "Media"
                     cbxPrincPrioReal.SelectedIndex = 3
+                    _prioriReal = cbxPrincPrioReal.SelectedItem
                 Case "Baja"
                     cbxPrincPrioReal.SelectedIndex = 4
+                    _prioriReal = cbxPrincPrioReal.SelectedItem
             End Select
         End If
         txtPrincHoras.Text = DataGridViewPrincipal.Rows(intGlobalIndex).Cells(5).Value
@@ -343,7 +351,7 @@ Public Class Form1
 
     Function _compare()
         Dim x As Boolean = False
-        Dim strA As String = txtPrincPrioridad.Text
+        Dim strA As String = _prioriReal
         Dim strB As String = cbxPrincPrioReal.SelectedItem
         If strA.Equals(strB) Then
             x = True
