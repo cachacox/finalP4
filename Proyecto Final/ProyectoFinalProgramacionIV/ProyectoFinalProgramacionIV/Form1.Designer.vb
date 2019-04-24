@@ -62,6 +62,8 @@ Partial Class Form1
         Me.dtpPrincResol = New System.Windows.Forms.DateTimePicker()
         Me.cbxPrincModulo = New System.Windows.Forms.ComboBox()
         Me.cbxPrincPrioReal = New System.Windows.Forms.ComboBox()
+        Me.txtRecal = New System.Windows.Forms.TextBox()
+        Me.lblRecalc = New System.Windows.Forms.Label()
         Me.PanelResumen.SuspendLayout()
         CType(Me.DataGridViewPrincipal, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -373,7 +375,7 @@ Partial Class Form1
         Me.txtPrincHoras.Enabled = False
         Me.txtPrincHoras.Location = New System.Drawing.Point(430, 8)
         Me.txtPrincHoras.Name = "txtPrincHoras"
-        Me.txtPrincHoras.Size = New System.Drawing.Size(43, 20)
+        Me.txtPrincHoras.Size = New System.Drawing.Size(34, 20)
         Me.txtPrincHoras.TabIndex = 22
         '
         'txtPrincFechaEst
@@ -419,6 +421,7 @@ Partial Class Form1
         'cbxPrincModulo
         '
         Me.cbxPrincModulo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxPrincModulo.Enabled = False
         Me.cbxPrincModulo.FormattingEnabled = True
         Me.cbxPrincModulo.Items.AddRange(New Object() {"AIA", "AIA - Integracion Siebel", "ATV", "ATV - Error Datos", "ATV Error Datos", "BEM - Invoice", "BO", "BRM  - Invoice", "BRM - Ajuste", "BRM - Ajustes", "BRM - Billing", "BRM - Collections ", "BRM - Cuentas", "BRM -- Cuentas", "BRM - Facturacion", "BRM - GL", "BRM - Invoice", "BRM - Pricing", "BRM - Raring", "BRM - Rating", "BRM - Roaming", "BRM - Tasacion", "BRM . Cuentas", "BRM -Ajustes", "BRM- Invoice", "Concilia", "Concilia ", "CRM", "CRM - Datos", "CRM Aplicativo", "GUI - Operativa", "GUI - Operativa Error Humano", "ICEPAD", "Infraestrucutra", "Integracion - BRM", "Integracion - Legados ", "Integracion - Legados - Cofra", "Integracion - Legados - Compra", "Integracion - Legados - Gepa", "Integracion - Legados - Notificacion", "Integracion - Legados - Remo", "Integracion - Legados -Gepa", "Integracion - Legados- Remo", "Integracion - Siebel", "Integracon - Legados - Gepa", "Integracon - Siebel", "Intregracion - BRM", "Migracion", "MZ", "N/A", "Portabilidad", "Portal Corporativo", "Reportes", "Sincronizacion Datos"})
         Me.cbxPrincModulo.Location = New System.Drawing.Point(430, 155)
@@ -429,6 +432,7 @@ Partial Class Form1
         'cbxPrincPrioReal
         '
         Me.cbxPrincPrioReal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cbxPrincPrioReal.Enabled = False
         Me.cbxPrincPrioReal.FormattingEnabled = True
         Me.cbxPrincPrioReal.Items.AddRange(New Object() {"", "Emergencia", "Alta", "Media", "Baja"})
         Me.cbxPrincPrioReal.Location = New System.Drawing.Point(118, 148)
@@ -436,11 +440,32 @@ Partial Class Form1
         Me.cbxPrincPrioReal.Size = New System.Drawing.Size(80, 21)
         Me.cbxPrincPrioReal.TabIndex = 31
         '
+        'txtRecal
+        '
+        Me.txtRecal.Enabled = False
+        Me.txtRecal.Location = New System.Drawing.Point(578, 6)
+        Me.txtRecal.Name = "txtRecal"
+        Me.txtRecal.Size = New System.Drawing.Size(34, 20)
+        Me.txtRecal.TabIndex = 33
+        Me.txtRecal.Visible = False
+        '
+        'lblRecalc
+        '
+        Me.lblRecalc.AutoSize = True
+        Me.lblRecalc.Location = New System.Drawing.Point(483, 9)
+        Me.lblRecalc.Name = "lblRecalc"
+        Me.lblRecalc.Size = New System.Drawing.Size(89, 13)
+        Me.lblRecalc.TabIndex = 32
+        Me.lblRecalc.Text = "Recálculo Horas:"
+        Me.lblRecalc.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(939, 427)
+        Me.Controls.Add(Me.txtRecal)
+        Me.Controls.Add(Me.lblRecalc)
         Me.Controls.Add(Me.cbxPrincPrioReal)
         Me.Controls.Add(Me.cbxPrincModulo)
         Me.Controls.Add(Me.dtpPrincResol)
@@ -520,4 +545,6 @@ Partial Class Form1
     Friend WithEvents dtpPrincResol As DateTimePicker
     Friend WithEvents cbxPrincModulo As ComboBox
     Friend WithEvents cbxPrincPrioReal As ComboBox
+    Friend WithEvents txtRecal As TextBox
+    Friend WithEvents lblRecalc As Label
 End Class

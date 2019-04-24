@@ -65,15 +65,16 @@ Public Class Form1
     End Sub
 
     Private Sub ButtonEliminar_Click(sender As Object, e As EventArgs) Handles ButtonEliminar.Click
-        Dim intRespuesta As Integer = MsgBox("Desea borrar la carrera?", vbYesNo)
+        strGlobalIncid = txtPrincIncidente.Text
+        Dim intRespuesta As Integer = MsgBox("Desea borrar el Incidente " + strGlobalIncid + "?", vbYesNo)
         If intRespuesta = 6 Then
-            strGlobalIncid = txtPrincIncidente.Text
             AccesoLogica.BorrarInfo(strGlobalIncid)
             renewTabla()
         End If
     End Sub
 
     Private Sub ButtonModificar_Click(sender As Object, e As EventArgs) Handles ButtonModificar.Click
+        cargarDatos()
         ButtonInsertar.Visible = False
         ButtonEliminar.Visible = False
         ButtonModificar.Visible = False
@@ -98,6 +99,8 @@ Public Class Form1
         dtpPrincAsignado.Enabled = False
         cbxPrincPrioReal.Enabled = False
         txtPrincUsuario.Enabled = False
+        lblRecalc.Visible = False
+        txtRecal.Visible = False
         renewTabla()
     End Sub
 
@@ -191,6 +194,43 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarDatos()
         renewTabla()
+    End Sub
+
+    Sub cargarDatos()
+        Dim a, b As String
+        a = txtPrincPrioridad.Text
+        b = cbxPrincPrioReal.SelectedItem
+        If a.Equals(b) Then
+            lblRecalc.Visible = False
+            txtRecal.Visible = False
+            txtRecal.Text = ""
+        Else
+            lblRecalc.Visible = True
+            txtRecal.Visible = True
+        End If
+    End Sub
+
+    Private Sub cbxPrincPrioReal_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxPrincPrioReal.SelectedIndexChanged
+        cargarDatos()
+        Select Case cbxPrincPrioReal.SelectedItem
+            Case "Emergencia"
+                txtRecal.Text = "4"
+                DeterminaHoras(cbxPrincPrioReal.SelectedItem)
+            Case "Alta"
+                txtRecal.Text = "26"
+                DeterminaHoras(cbxPrincPrioReal.SelectedItem)
+            Case "Media"
+                txtRecal.Text = "32"
+                DeterminaHoras(cbxPrincPrioReal.SelectedItem)
+            Case "Baja"
+                txtRecal.Text = "96"
+                DeterminaHoras(cbxPrincPrioReal.SelectedItem)
+        End Select
+    End Sub
+
+    Sub DeterminaHoras(_str)
+
     End Sub
 End Class
