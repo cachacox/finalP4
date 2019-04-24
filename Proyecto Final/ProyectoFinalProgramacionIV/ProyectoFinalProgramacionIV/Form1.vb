@@ -27,12 +27,9 @@ Public Class Form1
         End If
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs)
-        ButtonActualizar.Visible = False
-        ProgressBar.Visible = False
-        LabelCargando.Visible = False
-        renewTabla()
-    End Sub
+    'Private Sub Form1_Load(sender As Object, e As EventArgs)
+
+    'End Sub
 
     Private Sub ButtonModulosAfectados_Click(sender As Object, e As EventArgs) Handles ButtonModulosAfectados.Click
         Dim VentanaModulosAfectados = New ModulosAfectados()
@@ -336,6 +333,9 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load_1(sender As Object, e As EventArgs) Handles MyBase.Load
+        ButtonActualizar.Visible = False
+        ProgressBar.Visible = False
+        LabelCargando.Visible = False
         renewTabla()
         dttfecha1 = Convert.ToDateTime(txtPrincFechaCrea.Text)
         _datemp = txtPrincFechaEst.Text
