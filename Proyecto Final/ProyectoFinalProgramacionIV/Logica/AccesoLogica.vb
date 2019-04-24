@@ -7,6 +7,11 @@ Public Class AccesoLogica
     Public Shared Function InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
         Return AccesoDatos.InsertarInfoExcel(no_incidente, usuario, fecha_creacion, prioridad, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod)
     End Function
+
+    Public Shared Function ActualizarInfo(no_incidente, usuario, fecha_creacion, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
+        Return AccesoDatos.ActualizarInfo(no_incidente, usuario, fecha_creacion, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod)
+    End Function
+
     Public Shared Function BorrarInfo(_incid) As DataTable
         Return AccesoDatos.BorrarInfo(_incid)
     End Function

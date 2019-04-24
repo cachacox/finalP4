@@ -97,6 +97,40 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 
+    Public Shared Function ActualizarInfo(no_incidente, usuario, fecha_creacion, prioridad_real, horas, fech_estado, fecha_asignado, fecha_resultado, estado, _mod) As DataTable
+        Dim comandoInsertar As SqlCommand = MetodosDatos.CrearComando
+        comandoInsertar.CommandText = "Update excel set Usuario=@Usuario, Fecha_Creacion=@Fecha_Creacion, Prioridad_Real=@Prioridad_Real, Horas=@Horas, Fecha_Est=@Fecha_Est, Fecha_Asigna=@Fecha_Asigna, Fecha_Resul=@Fecha_Resul, Estado=@Estado, modulo=@modulo where No_Incidente = @No_Incidente"
+        comandoInsertar.Parameters.Add("@No_Incidente", SqlDbType.NVarChar)
+        comandoInsertar.Parameters.Add("@Usuario", SqlDbType.NVarChar)
+        comandoInsertar.Parameters.Add("@Fecha_Creacion", SqlDbType.DateTime2)
+        comandoInsertar.Parameters.Add("@Prioridad_Real", SqlDbType.NVarChar)
+        comandoInsertar.Parameters.Add("@Horas", SqlDbType.Int)
+        comandoInsertar.Parameters.Add("@Fecha_Est", SqlDbType.DateTime2)
+        comandoInsertar.Parameters.Add("@Fecha_Asigna", SqlDbType.DateTime2)
+        comandoInsertar.Parameters.Add("@Fecha_Resul", SqlDbType.DateTime2)
+        comandoInsertar.Parameters.Add("@Estado", SqlDbType.NVarChar)
+        comandoInsertar.Parameters.Add("@modulo", SqlDbType.NVarChar)
+        comandoInsertar.Parameters("@No_Incidente").Value = no_incidente
+        comandoInsertar.Parameters("@Usuario").Value = usuario
+        comandoInsertar.Parameters("@Fecha_Creacion").Value = Convert.ToDateTime(fecha_creacion)
+        If prioridad_real <> Nothing Then
+            comandoInsertar.Parameters("@Prioridad_Real").Value = prioridad_real
+        Else
+            comandoInsertar.Parameters("@Prioridad_Real").Value = ""
+        End If
+        comandoInsertar.Parameters("@Horas").Value = Convert.ToInt32(horas)
+        comandoInsertar.Parameters("@Fecha_Est").Value = Convert.ToDateTime(fech_estado)
+        comandoInsertar.Parameters("@Fecha_Asigna").Value = Convert.ToDateTime(fecha_asignado)
+        comandoInsertar.Parameters("@Fecha_Resul").Value = Convert.ToDateTime(fecha_resultado)
+        comandoInsertar.Parameters("@Estado").Value = estado
+        If _mod <> Nothing Then
+            comandoInsertar.Parameters("@modulo").Value = _mod
+        Else
+            comandoInsertar.Parameters("@modulo").Value = ""
+        End If
+        Return MetodosDatos.EjecutarComandoSelect(comandoInsertar)
+    End Function
+
     Public Shared Function FiltrarResumenModuloAfectado(fecha_inicio, fecha_final, modulo) As DataTable
         Dim comando As SqlCommand = MetodosDatos.ComandoSP
         comando.CommandText = "FiltrosResumenModuloAfectados"
