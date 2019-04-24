@@ -103,7 +103,7 @@ Partial Class IncidentesNuevos
         Me.ComboBoxFiltro.FormattingEnabled = True
         Me.ComboBoxFiltro.Location = New System.Drawing.Point(60, 12)
         Me.ComboBoxFiltro.Name = "ComboBoxFiltro"
-        Me.ComboBoxFiltro.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxFiltro.Size = New System.Drawing.Size(200, 21)
         Me.ComboBoxFiltro.TabIndex = 8
         '
         'ButtonRestablecerFiltro

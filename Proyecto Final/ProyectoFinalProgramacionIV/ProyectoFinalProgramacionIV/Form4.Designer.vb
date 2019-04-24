@@ -37,6 +37,7 @@ Partial Class IncidentesPendientes
         '
         'DataGridViewIncidentesPndientes
         '
+        Me.DataGridViewIncidentesPndientes.AllowUserToAddRows = False
         Me.DataGridViewIncidentesPndientes.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -102,7 +103,7 @@ Partial Class IncidentesPendientes
         Me.ComboBoxFiltro.FormattingEnabled = True
         Me.ComboBoxFiltro.Location = New System.Drawing.Point(60, 12)
         Me.ComboBoxFiltro.Name = "ComboBoxFiltro"
-        Me.ComboBoxFiltro.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBoxFiltro.Size = New System.Drawing.Size(200, 21)
         Me.ComboBoxFiltro.TabIndex = 8
         '
         'ButtonRestablecerFiltro

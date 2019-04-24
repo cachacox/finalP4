@@ -92,8 +92,12 @@ Public Class Form1
         Dim _hora As Decimal = Math.Round(Now().Hour + (Now().Minute / 60), 2)
         Dim _fechas As Date = Today()
         Dim _flag As Boolean = False
+#Disable Warning BC42024 ' Unused local variable
         Dim strFecha As String
+#Enable Warning BC42024 ' Unused local variable
+#Disable Warning BC42024 ' Unused local variable
         Dim intLen As Integer
+#Enable Warning BC42024 ' Unused local variable
 
         If _fechas.DayOfWeek = DayOfWeek.Saturday Then
             _dia = _dia + 2

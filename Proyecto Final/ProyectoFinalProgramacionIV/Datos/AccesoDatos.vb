@@ -115,9 +115,21 @@ Public Class AccesoDatos
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 
+    Public Shared Function FiltroRetrasados(fecha_inicio, fecha_final, modulo) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.ComandoSP
+        comando.CommandText = "FiltroRetrasados"
+        comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
+        comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters.Add("@modulo", SqlDbType.NVarChar)
+        comando.Parameters("@fecha_inicio").Value = fecha_inicio
+        comando.Parameters("@fecha_final").Value = fecha_final
+        comando.Parameters("@modulo").Value = modulo
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
     Public Shared Function ResumenIncidentesPendientes() As DataTable
         Dim comando As SqlCommand = MetodosDatos.CrearComando
-        comando.CommandText = "SELECT * from excel WHERE Fecha_Resul IS NULL OR Fecha_Resul = '' AND Fecha_Est < CAST(CURRENT_TIMESTAMP AS DATE)"
+        comando.CommandText = "SELECT * from excel WHERE Estado = 'Pendiente'"
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 
@@ -130,6 +142,42 @@ Public Class AccesoDatos
     Public Shared Function CargarTabla() As DataTable
         Dim comando As SqlCommand = MetodosDatos.CrearComando
         comando.CommandText = "SELECT * from excel"
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function FiltroPendientes(fecha_inicio, fecha_final, modulo) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.ComandoSP
+        comando.CommandText = "FiltrarPendientes"
+        comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
+        comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters.Add("@modulo", SqlDbType.NVarChar)
+        comando.Parameters("@fecha_inicio").Value = fecha_inicio
+        comando.Parameters("@fecha_final").Value = fecha_final
+        comando.Parameters("@modulo").Value = modulo
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function FiltroNuevos(fecha_inicio, fecha_final, modulo) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.ComandoSP
+        comando.CommandText = "FiltrarNuevos"
+        comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
+        comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters.Add("@modulo", SqlDbType.NVarChar)
+        comando.Parameters("@fecha_inicio").Value = fecha_inicio
+        comando.Parameters("@fecha_final").Value = fecha_final
+        comando.Parameters("@modulo").Value = modulo
+        Return MetodosDatos.EjecutarComandoSelect(comando)
+    End Function
+
+    Public Shared Function FiltrarIncidentesResueltos(fecha_inicio, fecha_final, modulo) As DataTable
+        Dim comando As SqlCommand = MetodosDatos.ComandoSP
+        comando.CommandText = "FiltroIncidentesResueltos"
+        comando.Parameters.Add("@fecha_inicio", SqlDbType.DateTime2)
+        comando.Parameters.Add("@fecha_final", SqlDbType.DateTime2)
+        comando.Parameters.Add("@modulo", SqlDbType.NVarChar)
+        comando.Parameters("@fecha_inicio").Value = fecha_inicio
+        comando.Parameters("@fecha_final").Value = fecha_final
+        comando.Parameters("@modulo").Value = modulo
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 

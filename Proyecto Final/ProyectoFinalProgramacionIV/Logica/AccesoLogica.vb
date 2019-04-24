@@ -41,4 +41,20 @@ Public Class AccesoLogica
         Return AccesoDatos.ResumenNuevos()
     End Function
 
+    Public Shared Function FiltroRetrasados(fecha_inicio, fecha_final, modulo) As DataTable
+        Return AccesoDatos.FiltroRetrasados(fecha_inicio, fecha_final, modulo)
+    End Function
+
+    Public Shared Function FiltroPendientes(fecha_inicio, fecha_final, modulo) As DataTable
+        Return AccesoDatos.FiltroPendientes(fecha_inicio, fecha_final, modulo)
+    End Function
+
+    Public Shared Function FiltroNuevos(fecha_inicio, fecha_final, modulo) As DataTable
+        Return AccesoDatos.FiltroNuevos(fecha_inicio, fecha_final, modulo)
+    End Function
+
+    Public Shared Function FiltrarIncidentesResueltos(fecha_inicio, fecha_final, modulo) As DataTable
+        Return AccesoDatos.FiltrarIncidentesResueltos(fecha_inicio, fecha_final, modulo)
+    End Function
+
 End Class
