@@ -111,7 +111,7 @@ Public Class AccesoDatos
 
     Public Shared Function ResumenIncidentesMora() As DataTable
         Dim comando As SqlCommand = MetodosDatos.CrearComando
-        comando.CommandText = "SELECT * from excel WHERE Fecha_Resul IS NULL OR Fecha_Resul = '' AND Fecha_Est > CAST(CURRENT_TIMESTAMP AS DATE)"
+        comando.CommandText = "SELECT * from excel WHERE Estado = 'Retrasado'"
         Return MetodosDatos.EjecutarComandoSelect(comando)
     End Function
 
