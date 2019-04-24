@@ -447,7 +447,6 @@ Partial Class Form1
         Me.txtRecal.Name = "txtRecal"
         Me.txtRecal.Size = New System.Drawing.Size(34, 20)
         Me.txtRecal.TabIndex = 33
-        Me.txtRecal.Visible = False
         '
         'lblRecalc
         '
@@ -457,7 +456,6 @@ Partial Class Form1
         Me.lblRecalc.Size = New System.Drawing.Size(89, 13)
         Me.lblRecalc.TabIndex = 32
         Me.lblRecalc.Text = "Recálculo Horas:"
-        Me.lblRecalc.Visible = False
         '
         'Form1
         '
