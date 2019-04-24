@@ -231,6 +231,13 @@ Public Class Form1
 
     Private Sub ButtonActualizar_Click(sender As Object, e As EventArgs) Handles ButtonActualizar.Click
         'acá va el insert al sql again
+        Dim bolFlag As Boolean = _compare()
+        Dim tempHoras As String
+        Dim tempPrioReal As String
+        If Not bolFlag Then
+            tempHoras = txtRecal.Text
+            tempPrioReal = cbxPrincPrioReal.SelectedItem
+        End If
         ButtonInsertar.Visible = True
         ButtonEliminar.Visible = True
         ButtonModificar.Visible = True
@@ -242,6 +249,7 @@ Public Class Form1
         txtPrincUsuario.Enabled = False
         lblRecalc.Visible = False
         txtRecal.Visible = False
+        AccesoLogica.ActualizarInfo(txtPrincIncidente.Text, txtPrincUsuario.Text, txtPrincFechaCrea.Text, tempPrioReal, tempHoras, txtPrincFechaEst.Text, dtpPrincAsignado.Value, dtpPrincResol.Value, txtPrincEstado.Text, cbxPrincModulo.SelectedItem)
         renewTabla()
     End Sub
 
